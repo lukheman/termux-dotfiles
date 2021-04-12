@@ -6,9 +6,9 @@ Ini adalah dotfiles untuk konfigurasi Termux saya.Saya membuat konfigurasi ini s
 
 Berikut beberapa beberapa alat pendukung yang saya gunakan
 
-- **Shell**  • [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) + [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) framework + plugins
+- **Shell**  • [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) + [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) framework + Plugin
 - **Prompt** • [powerlevel10k](https://github.com/romkatv/powerlevel10k)
-- **Text Editor**  • [Neovim](https://neovim.io/) + plugins
+- **Text Editor**  • [Neovim](https://neovim.io/) + Plugin
 
 # Instalasi
 <details>
@@ -20,7 +20,7 @@ $ pkg install zsh
 </details>
 
 <details>
-<summary>Oh-my-zsh & Plugins <kbd>optional</kbd></summary>
+<summary>Oh-my-zsh & Plugin <kbd>optional</kbd></summary>
 
 ```sh
 $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
@@ -40,7 +40,9 @@ $ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:
 </details>
 
 <details>
-<summary>Neovim</summary>
+<summary>Neovim & Plugin</summary>
+
+> Untuk konfigurasi dan cara pemasangan plugin silahkan lihat [nvimrc](https://github.com/pandas-id/nvimrc) punya saya atau Anda juga bisa menyesuaikannya sendiri sesuai kebutuhan.
 
 ```
 $ pkg install neovim
