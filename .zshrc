@@ -104,6 +104,7 @@ ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaa,underline"
 # fi
 
 GITSTATUS_LOG_LEVEL=DEBUG
+typeset -g POWERLEVEL9K_INSTANT_PROMPT=off
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -126,3 +127,4 @@ alias nvimconf="nvim ~/.config/nvim"
 alias chfont='/data/data/com.termux/files/home/.termux/fonts.sh'
 alias chcolor='/data/data/com.termux/files/home/.termux/colors.sh'
 alias c='clear'
+alias document='cd /sdcard/document'
