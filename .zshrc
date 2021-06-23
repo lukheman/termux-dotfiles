@@ -87,7 +87,7 @@ source $ZSH/oh-my-zsh.sh
 
 ### PLUGIN CONFIGURATION ###
 ## zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaa,underline"
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaa"
 
 # User configuration
 
@@ -121,7 +121,7 @@ alias chfont='/data/data/com.termux/files/home/.termux/fonts.sh'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Ganti bentuk cursor menjadi underline
-printf '\e[4 q'
+# printf '\e[4 q'
 
 alias nvimconf="nvim ~/.config/nvim"
 alias chfont='/data/data/com.termux/files/home/.termux/fonts.sh'
