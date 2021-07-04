@@ -27,4 +27,4 @@ alias document='cd /sdcard/document'
 eval "$(starship init zsh)"
 
 # load banner
-./.banner.sh
+~/.banner.sh
