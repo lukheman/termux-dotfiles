@@ -47,9 +47,11 @@ gitd() {
 }
 
 # translate shell
-toid() {
-    trans en:id $1
-}
+# toid() {
+#     trans en:id $1
+# }
+alias toid='trans en:id --shell'
+alias toen='trans id:en --shell'
 
 # load starship
 eval "$(starship init zsh)"
