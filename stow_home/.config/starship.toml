@@ -13,11 +13,14 @@ $git_state\
 $git_status\
 $env_var\
 $jobs\
-$cmd_duration\
+$nodejs\
+$python\
 $line_break\
 $shell\
-$python\
-$character"""
+$character\
+"""
+
+right_format = "$cmd_duration"
 
 [git_status]
 ahead = "⇡${count}"
@@ -26,3 +29,6 @@ behind = "⇣${count}"
 
 [python]
 format = '[${pyenv_prefix}(\($virtualenv\) )]($style)'
+
+[nodejs]
+detect_extensions = []
