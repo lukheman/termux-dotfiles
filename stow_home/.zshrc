@@ -2,7 +2,12 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(
+  zsh-autosuggestions
+  fast-syntax-highlighting
+  aliases
+  git
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -27,37 +32,10 @@ alias py="python"
 
 # folder
 alias document='cd /sdcard/Document'
-alias belajar='cd /sdcard/Document/belajar'
-alias projek='cd /sdcard/Document/projek'
-alias photo='cd /sdcard/DCIM'
+alias nvconf='cd .config/nvim'
 
-# git
-alias gits='git status'
-
-gita() {
-    git add $1
-}
-
-gitc() {
-    git commit -m $1
-}
-
-gitd() {
-    git diff $1
-}
-
-# translate shell
-# toid() {
-#     trans en:id $1
-# }
 alias toid='trans en:id --shell'
 alias toen='trans id:en --shell'
 
 # load starship
 eval "$(starship init zsh)"
-
-# load banner
-# ~/.banner.sh
-
-# system fetch
-~/.rxfetch
