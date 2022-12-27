@@ -32,7 +32,7 @@ alias py="python"
 
 # folder
 alias document='cd /sdcard/Document'
-alias nvconf='cd .config/nvim'
+alias nvconf='cd ~/.config/nvim'
 
 alias toid='trans en:id --shell'
 alias toen='trans id:en --shell'
