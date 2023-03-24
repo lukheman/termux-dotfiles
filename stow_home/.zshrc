@@ -34,8 +34,16 @@ alias py="python"
 alias document='cd /sdcard/Document'
 alias nvconf='cd ~/.config/nvim'
 
+# postgresql
+alias psqlstart='pg_ctl -D /data/data/com.termux/files/usr/var/lib/postgresql -l logfile start'
+alias psqlstop='pg_ctl -D /data/data/com.termux/files/usr/var/lib/postgresql -l logfile stop'
+
+# translate-shell
 alias toid='trans en:id --shell'
 alias toen='trans id:en --shell'
+
+# Auto start tmux
+if [ "$TMUX" = "" ]; then tmux; fi
 
 # load starship
 eval "$(starship init zsh)"
