@@ -39,11 +39,12 @@ alias psqlstart='pg_ctl -D /data/data/com.termux/files/usr/var/lib/postgresql -l
 alias psqlstop='pg_ctl -D /data/data/com.termux/files/usr/var/lib/postgresql -l logfile stop'
 
 # translate-shell
-alias toid='trans en:id --shell'
-alias toen='trans id:en --shell'
+alias toid='trans en:id --shell --brief'
+alias toen='trans id:en --shell --brief'
 
-# Auto start tmux
-if [ "$TMUX" = "" ]; then tmux; fi
-
+# # Auto start tmux
+# if [ -z "$TMUX" ]; then
+#     tmux attach -t default || tmux new -s default
+# fi
 # load starship
 eval "$(starship init zsh)"
