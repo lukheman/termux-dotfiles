@@ -1,6 +1,9 @@
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 
+# tmuxp
+export DISABLE_AUTO_TITLE='true'
+
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   zsh-autosuggestions
@@ -42,9 +45,10 @@ alias psqlstop='pg_ctl -D /data/data/com.termux/files/usr/var/lib/postgresql -l 
 alias toid='trans en:id --shell --brief'
 alias toen='trans id:en --shell --brief'
 
-# # Auto start tmux
-# if [ -z "$TMUX" ]; then
-#     tmux attach -t default || tmux new -s default
-# fi
+# Auto start tmux
+if [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
+
 # load starship
 eval "$(starship init zsh)"
