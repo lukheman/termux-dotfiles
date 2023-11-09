@@ -22,6 +22,10 @@ $character\
 
 right_format = "$cmd_duration"
 
+[cmd_duration]
+min_time = 0
+show_milliseconds = true
+
 [git_status]
 ahead = "⇡${count}"
 diverged = "⇕⇡${ahead_count}⇣${behind_count}"
