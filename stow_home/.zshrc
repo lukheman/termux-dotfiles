@@ -1,22 +1,21 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
+ZIM_HOME=~/.zim
 
-# tmuxp
-export DISABLE_AUTO_TITLE='true'
+# Download zimfw plugin manager if missing.
+if [[ ! -e ${ZIM_HOME}/zimfw.zsh ]]; then
+  curl -fsSL --create-dirs -o ${ZIM_HOME}/zimfw.zsh \
+      https://github.com/zimfw/zimfw/releases/latest/download/zimfw.zsh
+fi
 
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-  zsh-autosuggestions
-  fast-syntax-highlighting
-  aliases
-  git
-)
+# Install missing modules, and update ${ZIM_HOME}/init.zsh if missing or outdated.
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  source ${ZIM_HOME}/zimfw.zsh init -q
+fi
 
-source $ZSH/oh-my-zsh.sh
+# Initialize modules.
+source ${ZIM_HOME}/init.zsh
 
-### PLUGIN CONFIGURATION ###
-## zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaa"
+# zsh-autosuggestions
+# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaa"
 
 # aliases
 alias chcolor='/data/data/com.termux/files/home/.termux/colors.sh'
@@ -27,15 +26,16 @@ alias chcolor='/data/data/com.termux/files/home/.termux/colors.sh'
 alias c='clear'
 
 # system
-alias ls="exa --icons"
+alias ls="exa --icons --sort=extension"
 alias la="exa --icons -a"
-alias lt="exa --icons --tree"
 alias lta="exa --icons --tree -lgha"
-alias py="python"
+# alias py="python"
+alias lz="exa -l --no-time --no-permissions --no-user --sort=extension"
 
 # folder
 alias document='cd /sdcard/Document'
 alias nvconf='cd ~/.config/nvim'
+alias py="python"
 
 # postgresql
 alias psqlstart='pg_ctl -D /data/data/com.termux/files/usr/var/lib/postgresql -l logfile start'
