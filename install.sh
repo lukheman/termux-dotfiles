@@ -27,3 +27,9 @@ echo "********************"
 echo
 echo "Installing tmuxp (tmux session manager)"
 pip install --user tmuxp
+
+echo
+echo "Cloning dotfiles"
+git clone https://github.com/pandas-id/termux-dotfile ~/dotfiles
+cd ~/dotfiles
+stow starship termux tmux zsh
