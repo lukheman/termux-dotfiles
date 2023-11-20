@@ -20,3 +20,10 @@ pkg install python
 echo
 echo "Installing Exa"
 pkg install exa
+
+echo
+echo "********************"
+
+echo
+echo "Installing tmuxp (tmux session manager)"
+pip install --user tmuxp
