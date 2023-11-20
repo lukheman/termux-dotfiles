@@ -29,6 +29,7 @@ alias lz="exa -l --no-time --no-permissions --no-user --sort=extension"
 # folder
 alias document='cd /sdcard/Document'
 alias nvconf='cd ~/.config/nvim'
+alias dotfiles='cd ~/dotfiles'
 
 # postgresql
 alias psqlstart='pg_ctl -D /data/data/com.termux/files/usr/var/lib/postgresql -l logfile start'
