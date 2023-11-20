@@ -25,11 +25,13 @@ alias ls="exa --icons --sort=extension"
 alias la="exa --icons -a"
 alias lta="exa --icons --tree -lgha"
 alias lz="exa -l --no-time --no-permissions --no-user --sort=extension"
+alias py="python"
 
 # folder
 alias document='cd /sdcard/Document'
 alias nvconf='cd ~/.config/nvim'
 alias dotfiles='cd ~/dotfiles'
+alias projects='cd ~/projects'
 
 # postgresql
 alias psqlstart='pg_ctl -D /data/data/com.termux/files/usr/var/lib/postgresql -l logfile start'
@@ -38,6 +40,15 @@ alias psqlstop='pg_ctl -D /data/data/com.termux/files/usr/var/lib/postgresql -l 
 # translate-shell
 alias toid='trans en:id --shell --brief'
 alias toen='trans id:en --shell --brief'
+
+fdd() {
+  local dir
+  dir=$(
+    cd &&
+      fd -0 --type d --exclude node_modules |
+      fzf --read0
+  ) && cd ~/$dir
+}
 
 # Auto start tmux
 if [ -z "$TMUX" ]; then
