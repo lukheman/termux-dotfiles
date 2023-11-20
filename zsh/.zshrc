@@ -18,6 +18,7 @@ source ${ZIM_HOME}/init.zsh
 alias chcolor='/data/data/com.termux/files/home/.termux/colors.sh'
 alias chfont='/data/data/com.termux/files/home/.termux/fonts.sh'
 alias c='clear'
+alias s='fd --type f --exclude .git --hidden | fzf-tmux -p --reverse | xargs nvim'
 
 # system
 alias ls="exa --icons --sort=extension"
