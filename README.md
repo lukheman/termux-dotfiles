@@ -4,8 +4,7 @@
 
 Ini adalah dotfiles untuk konfigurasi Termux saya.Saya membuat konfigurasi ini senyaman dan seringan mungkin untuk digunakan.
 
-Berikut beberapa beberapa alat pendukung yang saya gunakan
-
+# Detail
 - **Shell**  • [zsh](https://github.com/ohmyzsh/ohmyzsh/wiki/Installing-ZSH) + [zimfw](https://github.com/zimfw/zimfw) framework
 - **Text Editor**  • [Neovim](https://neovim.io/)
 
@@ -34,6 +33,7 @@ $ pkg install neovim
 
 > Untuk konfigurasi dan cara pemasangan plugin silahkan lihat [nvimrc](https://github.com/pandas-id/nvimrc)
 </details>
+
 
 # Konfigurasi
 

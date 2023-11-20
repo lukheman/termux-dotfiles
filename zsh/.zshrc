@@ -14,28 +14,20 @@ fi
 # Initialize modules.
 source ${ZIM_HOME}/init.zsh
 
-# zsh-autosuggestions
-# ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#aaa"
-
 # aliases
 alias chcolor='/data/data/com.termux/files/home/.termux/colors.sh'
 alias chfont='/data/data/com.termux/files/home/.termux/fonts.sh'
-alias nvimconf="nvim ~/.config/nvim"
-alias chfont='/data/data/com.termux/files/home/.termux/fonts.sh'
-alias chcolor='/data/data/com.termux/files/home/.termux/colors.sh'
 alias c='clear'
 
 # system
 alias ls="exa --icons --sort=extension"
 alias la="exa --icons -a"
 alias lta="exa --icons --tree -lgha"
-# alias py="python"
 alias lz="exa -l --no-time --no-permissions --no-user --sort=extension"
 
 # folder
 alias document='cd /sdcard/Document'
 alias nvconf='cd ~/.config/nvim'
-alias py="python"
 
 # postgresql
 alias psqlstart='pg_ctl -D /data/data/com.termux/files/usr/var/lib/postgresql -l logfile start'
