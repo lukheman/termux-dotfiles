@@ -2,7 +2,7 @@
 scan_timeout = 10
 
 # Disable the blank line at the start of the prompt
-add_newline = true
+add_newline = false
 
 # The default format is used to define the format of the prompt
 format = """
