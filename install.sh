@@ -1,6 +1,6 @@
 #!/usr/bin/bash
 
-Packages=('zsh' 'neovim' 'stow' 'tmux' 'python' 'exa' 'bat')
+Packages=('zsh' 'neovim' 'stow' 'tmux' 'python' 'exa' 'bat' 'lazygit')
 
 function install() {
   echo "Installing $1"
