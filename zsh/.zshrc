@@ -27,6 +27,8 @@ alias lta="exa --icons --tree -lgha"
 alias lz="exa -l --no-time --no-permissions --no-user --sort=extension"
 alias py="python"
 
+alias bat="bat --theme=base16 --style=grid"
+
 # folder
 alias document='cd /sdcard/Document'
 alias nvconf='cd ~/.config/nvim'
