@@ -1,25 +1,16 @@
-echo "Installing Packages"
-echo "Installing ZSH..."
-pkg install zsh
+#!/usr/bin/bash
 
-echo
-echo "Installing Neovim..."
-pkg install neovim
+Packages=('zsh' 'neovim' 'stow' 'tmux' 'python' 'exa' 'bat')
 
-echo "Installing GNU Stow"
-pkg install stow
+function install() {
+  echo "Installing $1"
+  pkg install $1
+  echo
+}
 
-echo
-echo "Installing Tmux..."
-pkg install tmux
-
-echo
-echo "Installing Pyhton..."
-pkg install python
-
-echo
-echo "Installing Exa"
-pkg install exa
+for packages in ${Packages[@]}; do
+  install $packages
+done
 
 echo
 echo "********************"
